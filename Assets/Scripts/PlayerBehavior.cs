@@ -6,10 +6,13 @@ public class PlayerBehavior : MonoBehaviour
 {
     public float bounceForce = 10f;
     private Rigidbody2D rb;
+    private GameObject floorGameObject;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -23,24 +26,49 @@ public class PlayerBehavior : MonoBehaviour
         // Check and limit the horizontal position
         float clampedX = Mathf.Clamp(transform.position.x, -maxHorizontalPosition, maxHorizontalPosition);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+
+        // Check if the player is at the screen borders
+        if (Mathf.Approximately(clampedX, -maxHorizontalPosition) || Mathf.Approximately(clampedX, maxHorizontalPosition))
+        {
+            // Apply the bounce force
+            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+        }
+
+        // Check if the player is below the camera's view and destroy it
+        if (transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is with the floor or the drawn line
-        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("DrawnLine"))
+        if (collision.gameObject.CompareTag("Floor"))
         {
             // Apply a bounce force
-            BounceOffWall(collision.contacts[0].normal);
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
+            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+            anim.SetTrigger("start");
+            if(!floorGameObject)
+            {
+                floorGameObject = collision.gameObject;
+            }
+        }
+
+        else if(collision.gameObject.CompareTag("DrawnLine"))
+        {
+            // Apply a bounce force
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
+            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+            Destroy(collision.gameObject);
+            anim.SetTrigger("start");
+
+            if (floorGameObject)
+            {
+                Destroy(floorGameObject);
+            }
         }
     }
 
-    private void BounceOffWall(Vector2 collisionNormal)
-    {
-        // Calculate the bounce direction using the collision normal
-        Vector2 bounceDirection = Vector2.Reflect(rb.velocity.normalized, collisionNormal);
-
-        // Apply the bounce force
-        rb.velocity = bounceDirection * bounceForce;
-    }
 }

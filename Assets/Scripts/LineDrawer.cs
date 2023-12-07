@@ -7,6 +7,7 @@ public class LineDrawer : MonoBehaviour
     public GameObject linePrefab;
     public Camera mainCamera;
     public float maxLineLength = 10f;
+    public RectTransform panelRect;
 
     private LineRenderer currentLine;
     private List<Vector2> linePoints;
@@ -25,7 +26,11 @@ public class LineDrawer : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    StartDrawing(touch.position);
+                    // Check if the touch position is within the panel boundaries
+                    if (IsInsidePanel(touch.position))
+                    {
+                        StartDrawing(touch.position);
+                    }
                     break;
 
                 case TouchPhase.Moved:
@@ -37,6 +42,12 @@ public class LineDrawer : MonoBehaviour
                     break;
             }
         }
+    }
+
+    bool IsInsidePanel(Vector2 touchPos)
+    {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(panelRect, touchPos, mainCamera, out Vector2 localPoint);
+        return panelRect.rect.Contains(localPoint);
     }
 
     void StartDrawing(Vector2 touchPos)
@@ -72,12 +83,21 @@ public class LineDrawer : MonoBehaviour
             // Ensure that points are not added too close to each other
             if (Vector2.Distance(point, linePoints[linePoints.Count - 1]) > 0.1f)
             {
-                linePoints.Add(point);
-                currentLine.positionCount++;
-                currentLine.SetPosition(currentLine.positionCount - 1, point);
+                // Check if the new point is inside the panel boundaries
+                if (IsInsidePanel(touchPos))
+                {
+                    linePoints.Add(point);
+                    currentLine.positionCount++;
+                    currentLine.SetPosition(currentLine.positionCount - 1, point);
 
-                // Update the points of the EdgeCollider2D
-                currentLine.GetComponent<EdgeCollider2D>().points = linePoints.ToArray();
+                    // Update the points of the EdgeCollider2D
+                    currentLine.GetComponent<EdgeCollider2D>().points = linePoints.ToArray();
+                }
+                else
+                {
+                    // Stop drawing if the new point is outside the panel
+                    StopDrawing();
+                }
             }
         }
     }
