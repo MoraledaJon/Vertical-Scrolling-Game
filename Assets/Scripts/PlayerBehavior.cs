@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float bounceForce = 10f;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private GameObject floorGameObject;
     private Animator anim;
+    public bool canMove = true;
+    public Vector2 rbWithData;
+    public float rbAngerVelocity;
 
     void Start()
     {
@@ -15,9 +18,17 @@ public class PlayerBehavior : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void FixedUpdate()
+    {
+        if (!canMove)
+            return;
+    }
+
     void Update()
     {
+
         // Calculate screen boundaries based on camera size and aspect ratio
+
         float screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
         // Adjust the maximum horizontal position dynamically
@@ -39,10 +50,12 @@ public class PlayerBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         // Check if the collision is with the floor or the drawn line
         if (collision.gameObject.CompareTag("Floor"))
         {

@@ -12,8 +12,13 @@ public class LineDrawer : MonoBehaviour
     private LineRenderer currentLine;
     private List<Vector2> linePoints;
 
+    public bool canDraw = true;
+
     void Update()
     {
+        if (!canDraw)
+            return;
+
         HandleInput();
     }
 

@@ -5,6 +5,10 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     private bool isPaused = false;
+    public Animator panelAnimator;
+    
+    public PlayerBehavior playerBehavior;
+    public LineDrawer lineDrawer;
 
     public void PauseGame()
     {
@@ -12,13 +16,19 @@ public class PauseManager : MonoBehaviour
 
         if (isPaused)
         {
-            // Game is paused
-            Time.timeScale = 0f;
+            playerBehavior.rb.bodyType = RigidbodyType2D.Static;
+            playerBehavior.rbWithData = playerBehavior.rb.velocity;
+            playerBehavior.rbAngerVelocity = playerBehavior.rb.angularVelocity;
+            lineDrawer.canDraw = false;
+            panelAnimator.SetBool("IsPaused", true);
         }
         else
         {
-            // Game is unpaused
-            Time.timeScale = 1f;
+            playerBehavior.rb.bodyType = RigidbodyType2D.Dynamic;
+            playerBehavior.rb.velocity = playerBehavior.rbWithData;
+            playerBehavior.rb.angularVelocity = playerBehavior.rbAngerVelocity;
+            lineDrawer.canDraw = true;
+            panelAnimator.SetBool("IsPaused", false);
         }
     }
 }
