@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: cc860ec617b45f147b72eb71395c490d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 422
+        width: 67
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177721d1e5ae51c4ba14cacd13b02bac
+      internalID: -656898291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 422
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df035fb765935d4088537c695ee7e68
+      internalID: 1655466323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 422
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73876f0104871e349a56bb11ab79c721
+      internalID: 1707543508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 421
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71daac0221044034580194df4cc0b385
+      internalID: 575822372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_4
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 422
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5b52e0550ad254dab313ee39340a5c
+      internalID: -115694192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_5
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 421
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8883e7a7c5d07bc44bdddb99017847c2
+      internalID: -189504192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 341
+        width: 84
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa928446d4d53c7488a7b941703a8043
+      internalID: -1619435352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_7
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 339
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a939a4470a2c940b3e70fac31fa422
+      internalID: 46991710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 339
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92850d9b036780743be5b25265a6f7f6
+      internalID: 2113405820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 340
+        width: 68
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd116a87ef68434ca13fdd25c57b5c7
+      internalID: -1788489305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_10
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 339
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2a3c8d1309c4c4484b3236b5b8f836
+      internalID: 1565723336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_11
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 262
+        width: 79
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9411ab8795bd6cb46a45a27584a79720
+      internalID: 1009038426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 262
+        width: 76
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef2c70ccb756634c917fb2c35883349
+      internalID: -1168623748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_13
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 261
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c125f636acd4418076e33dd21187a
+      internalID: -260975188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_14
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 262
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcef0097af803e46ab9113aeaee01fd
+      internalID: -2036271108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_15
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 259
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f83428e6c18644da77e01e0341fb0c
+      internalID: -1605652853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_16
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 261
+        width: 76
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ed08765c71d274daf18259ddd3f581
+      internalID: -1954532674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_17
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 182
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bb71e16380c654c9894c6e89dab79c
+      internalID: -151117911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 182
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed7e745051dcbc49a53bed17e70ccda
+      internalID: -591722141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_19
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 181
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc0cc2e5385b724c86fb1c75fcb4498
+      internalID: 567502185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_20
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 181
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895088939c5f42540af683de82db0b77
+      internalID: -371052719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 182
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a204f3859c16a4985070b2a6779333
+      internalID: 1961083152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 182
+        width: 72
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d224c2e9e570c4f8211e449a7e1948
+      internalID: 1180587984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_23
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 103
+        width: 76
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a6e6e5232d52f449ab646ddb1e00f0
+      internalID: 10163422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_24
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 103
+        width: 74
+        height: 67
+      alignment: 9
+      pivot: {x: 0.49035397, y: 0.50000024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040b65a5a478aa34ca71f5c7e9b92577
+      internalID: -979590968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_25
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 102
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd15dc97f815c744198d7b5e02b6dfe3
+      internalID: 1491341182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_26
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 101
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825729cb5642aa04db2c4e25dc2e5b46
+      internalID: -466080791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_27
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 103
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70035cd72ce70884f9f7eadb5b91914c
+      internalID: 409072935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_28
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 25
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97edfe10311ff0c40aa5884185b84655
+      internalID: -546746786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_29
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 26
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e74c373b4290a4184737374f0b440d
+      internalID: -130632850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_30
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 26
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a04fc99d448504cac22cdf3c2f81ad
+      internalID: 512710010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_31
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 26
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83a440f2df718448a0124dd511883b0
+      internalID: 1854010195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_32
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 26
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632b10a0d1809ac4bb0c7158132e5594
+      internalID: 1258687357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_33
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 26
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6576945aea4a3146aaf771e182b15d4
+      internalID: -9066506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_34
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 340
+        width: 67
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eef709d9d24d5c4daa460f968e5cb02
+      internalID: 1283455716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_35
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 103
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e44da27ceb61148bf38631e7fa8cba
+      internalID: 2014116405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_0: -656898291
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_1: 1655466323
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_10: 1565723336
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_11: 1009038426
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_12: -1168623748
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_13: -260975188
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_14: -2036271108
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_15: -1605652853
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_16: -1954532674
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_17: -151117911
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_18: -591722141
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_19: 567502185
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_2: 1707543508
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_20: -371052719
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_21: 1961083152
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_22: 1180587984
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_23: 10163422
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_24: -979590968
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_25: 1491341182
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_26: -466080791
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_27: 409072935
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_28: -546746786
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_29: -130632850
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_3: 575822372
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_30: 512710010
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_31: 1854010195
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_32: 1258687357
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_33: -9066506
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_34: 1283455716
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_35: 2014116405
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_4: -115694192
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_5: -189504192
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_6: -1619435352
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_7: 46991710
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_8: 2113405820
+      round-circle-sprite-sheet-inside-the-circle-there-is-different-animals-faces-cute-face-simple-pe-244870418_9: -1788489305
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

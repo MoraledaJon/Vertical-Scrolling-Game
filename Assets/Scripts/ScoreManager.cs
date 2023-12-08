@@ -10,7 +10,6 @@ public class ScoreManager : MonoBehaviour
 
     private int score;
 
-    // Update is called once per frame
     void Update()
     {
         score = Mathf.RoundToInt(cam.transform.position.y);

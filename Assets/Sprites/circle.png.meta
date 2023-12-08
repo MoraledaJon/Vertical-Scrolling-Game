@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 9d3db0b0d2342d047b0977b9fdcd9196
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 418
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c00d6a6c17bba64fa8d2b8d894e2e3c
+      internalID: -247332118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 419
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c04b92c52f5b8349ad8285e1b03d833
+      internalID: 441756209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_4
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 419
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5475c87b8c335c46a51ab8e27263255
+      internalID: 182071752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 338
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909adfe1292d1f24c97d5ab569f420e3
+      internalID: -2016789523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_11
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 339
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a749666bd1b8fb429833aef33045914
+      internalID: -367777926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 255
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ccc7477bc3d6e4893d88359612aaa0
+      internalID: -2043574550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 174
+        width: 76
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72511b8d54cdf54438cf1a0f21d00182
+      internalID: 103203315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_0: 261005098
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_1: -247332118
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_10: 1741618308
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_11: -367777926
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_12: 1653253895
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_13: -1814344255
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_14: 1956483799
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_15: -2043574550
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_16: -404380024
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_17: 1102174647
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_18: 103203315
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_19: 1513113136
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_2: 441756209
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_20: -1521013019
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_21: -1133425965
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_22: -1768507279
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_23: 1238249513
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_24: 1177346626
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_25: 599218672
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_26: 1279971477
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_27: 1496923452
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_28: 1550993587
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_29: -2080842906
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_3: -564765245
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_30: 1544490461
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_31: -964175545
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_32: -122636464
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_33: 2012089532
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_34: -1572464400
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_35: -1213926487
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_36: 1436444360
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_4: 182071752
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_5: -1708218270
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_6: -2016789523
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_7: -1301223683
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_8: 1593345202
+      round-circle-sprite-sheet-with-different-colors-cute-simple-perfect-round-circle-592035254_9: -553870844
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

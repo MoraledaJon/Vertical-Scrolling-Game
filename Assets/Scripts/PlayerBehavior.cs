@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float bounceForce = 10f;
+    public float bounceForceTurbo = 20f;
     public Rigidbody2D rb;
     private GameObject floorGameObject;
     private Animator anim;
-    public bool canMove = true;
-    public Vector2 rbWithData;
-    public float rbAngerVelocity;
+
+    public SpawnManager spawnManager;
 
     void Start()
     {
@@ -18,17 +18,9 @@ public class PlayerBehavior : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
-    {
-        if (!canMove)
-            return;
-    }
-
     void Update()
     {
-
         // Calculate screen boundaries based on camera size and aspect ratio
-
         float screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
         // Adjust the maximum horizontal position dynamically
@@ -71,16 +63,29 @@ public class PlayerBehavior : MonoBehaviour
 
         else if(collision.gameObject.CompareTag("DrawnLine"))
         {
-            // Apply a bounce force
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
             anim.SetTrigger("start");
+            
+            if(!spawnManager.isSpawning)
+            {
+                spawnManager.StartSpawning();
+            }
 
             if (floorGameObject)
             {
                 Destroy(floorGameObject);
             }
+        }
+
+        else if (collision.gameObject.CompareTag("turbo"))
+        {
+            // Apply a bounce force
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
+            rb.AddForce(Vector2.up * bounceForceTurbo, ForceMode2D.Impulse);
+            Destroy(collision.gameObject);
+            anim.SetTrigger("start");
         }
     }
 

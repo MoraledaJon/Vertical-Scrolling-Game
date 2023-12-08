@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PauseManager : MonoBehaviour
     
     public PlayerBehavior playerBehavior;
     public LineDrawer lineDrawer;
+    public SpawnManager spawnManager;
 
     public void PauseGame()
     {
@@ -16,19 +18,22 @@ public class PauseManager : MonoBehaviour
 
         if (isPaused)
         {
-            playerBehavior.rb.bodyType = RigidbodyType2D.Static;
-            playerBehavior.rbWithData = playerBehavior.rb.velocity;
-            playerBehavior.rbAngerVelocity = playerBehavior.rb.angularVelocity;
+            playerBehavior.rb.simulated = false;
             lineDrawer.canDraw = false;
+            spawnManager.PauseSpawning();
             panelAnimator.SetBool("IsPaused", true);
         }
         else
         {
-            playerBehavior.rb.bodyType = RigidbodyType2D.Dynamic;
-            playerBehavior.rb.velocity = playerBehavior.rbWithData;
-            playerBehavior.rb.angularVelocity = playerBehavior.rbAngerVelocity;
+            playerBehavior.rb.simulated = true;
             lineDrawer.canDraw = true;
+            spawnManager.ResumeSpawning();
             panelAnimator.SetBool("IsPaused", false);
         }
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
     }
 }
