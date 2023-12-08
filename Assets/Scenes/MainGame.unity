@@ -716,6 +716,7 @@ MonoBehaviour:
   panelAnimator: {fileID: 434484490}
   playerBehavior: {fileID: 246551833}
   lineDrawer: {fileID: 565061294}
+  spawnManager: {fileID: 565061298}
 --- !u!114 &565061298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,9 +731,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToSpawn:
   - {fileID: 2178852785676003413, guid: 42a1dc05af1004a46aa69a63394fabd2, type: 3}
-  spawnFirstItem: 5
-  spawnInterval: 10
+  spawnFirstItem: 1
+  spawnInterval: 2
   isSpawning: 0
+  isPaused: 0
 --- !u!1 &593911328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936188440}
   - component: {fileID: 936188441}
+  - component: {fileID: 936188442}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -1335,6 +1338,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &936188442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936188439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5714a66b735804d9a2f88d68f5854e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1158456338
 GameObject:
   m_ObjectHideFlags: 0
