@@ -23,6 +23,10 @@ public class BackgroundManager : MonoBehaviour
     public Transform playerTransform; // Reference to the player's transform
     private float lastSkyBottomPosition; // Store the bottom position of the last created sky
 
+    private int skyCount = 0;
+    private int skyToShow = 0;
+    private bool skyTransition = false;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -36,17 +40,30 @@ public class BackgroundManager : MonoBehaviour
     {
         if(playerTransform.transform.position.y > maxBackgroundyY - background_sizey)
         {
-           GameObject newBackground =  Instantiate(skyPrefab, new Vector3(transform.position.x, maxBackgroundyY, transform.position.z), Quaternion.identity);
-            newBackground.GetComponent<SpriteRenderer>().sprite = Skyes[0]; 
+            if (skyCount % 5 == 0)
+            {
+                skyToShow++;
+                skyTransition = true;
+            }
+
+            GameObject newBackground = Instantiate(skyPrefab, new Vector3(transform.position.x, maxBackgroundyY, transform.position.z), Quaternion.identity);
+            newBackground.GetComponent<SpriteRenderer>().sprite = Skyes[skyToShow];
             newBackground.transform.localScale = new Vector3(scaleX, scaleY, 1f);
             maxBackgroundyY += background_sizey;
             createdSkyesList.Add(newBackground);
-            if(createdSkyesList.Count > 3)
+            skyCount++;
+
+            if (skyTransition)
             {
-                Destroy(createdSkyesList[0]);   
+                skyToShow++;
+                skyTransition = false;
+            }
+
+            if (createdSkyesList.Count > 3)
+            {
+                Destroy(createdSkyesList[0]);
                 createdSkyesList.RemoveAt(0);
             }
-            Debug.Log(maxBackgroundyY);
         }
     }
 
@@ -99,4 +116,5 @@ public class BackgroundManager : MonoBehaviour
 
         }
     }
+
 }

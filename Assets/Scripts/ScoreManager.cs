@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     public Camera cam;
     public TextMeshProUGUI scoreText;
 
-    private int score;
+    public int score;
 
     void Update()
     {
