@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GameManager : MonoBehaviour
+public static  class GameManager 
 {
-    public Image selectedSkin;
+    public static Image selectedSkin;
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+
 }

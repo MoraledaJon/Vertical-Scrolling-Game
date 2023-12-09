@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     private Image selectedButtonImage;
-    public PlayerSkin playerSkin;
-    public GameManager gameManager;
+    public GameObject playerSkin;
 
     public void ToMainGame()
     {
@@ -17,16 +16,15 @@ public class ButtonManager : MonoBehaviour
 
     public void SelectedButton(GameObject clickedButton)
     {
-        // Get the Image component of the clicked button
         Image buttonImage = clickedButton.GetComponent<Image>();
 
         if (buttonImage != null)
         {
-            // Store the sprite of the clicked button in the variable
             selectedButtonImage = buttonImage;
 
-            // Now you can use 'selectedButtonImage' as needed
-            gameManager.selectedSkin = selectedButtonImage;
+
+            GameManager.selectedSkin = selectedButtonImage;
+
             playerSkin.GetComponent<SpriteRenderer>().sprite = selectedButtonImage.sprite;
         }
         else
