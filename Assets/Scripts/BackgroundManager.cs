@@ -18,14 +18,15 @@ public class BackgroundManager : MonoBehaviour
     private  float maxBackgroundyY = 0;
     private List<GameObject> createdSkyesList = new List<GameObject>();
 
-    private bool isSpawned = false;
-
     public Transform playerTransform; // Reference to the player's transform
     private float lastSkyBottomPosition; // Store the bottom position of the last created sky
 
+    private int currentSky = 0;
     private int skyCount = 0;
-    private int skyToShow = 0;
     private bool skyTransition = false;
+
+    public int skyesToShow = 5;
+
 
     void Start()
     {
@@ -40,14 +41,14 @@ public class BackgroundManager : MonoBehaviour
     {
         if(playerTransform.transform.position.y > maxBackgroundyY - background_sizey)
         {
-            if (skyCount % 5 == 0)
+            if (skyCount % skyesToShow == 0)
             {
-                skyToShow++;
+                currentSky++;
                 skyTransition = true;
             }
 
             GameObject newBackground = Instantiate(skyPrefab, new Vector3(transform.position.x, maxBackgroundyY, transform.position.z), Quaternion.identity);
-            newBackground.GetComponent<SpriteRenderer>().sprite = Skyes[skyToShow];
+            newBackground.GetComponent<SpriteRenderer>().sprite = Skyes[currentSky];
             newBackground.transform.localScale = new Vector3(scaleX, scaleY, 1f);
             maxBackgroundyY += background_sizey;
             createdSkyesList.Add(newBackground);
@@ -55,9 +56,10 @@ public class BackgroundManager : MonoBehaviour
 
             if (skyTransition)
             {
-                skyToShow++;
+                currentSky++;
                 skyTransition = false;
             }
+
 
             if (createdSkyesList.Count > 3)
             {
@@ -92,7 +94,6 @@ public class BackgroundManager : MonoBehaviour
             float spawnY = transform.position.y + background_sizey;
 
             maxBackgroundyY = background_sizey * 2;
-            Debug.Log(maxBackgroundyY);
 
             Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, transform.position.z);
 

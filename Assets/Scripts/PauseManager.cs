@@ -31,9 +31,4 @@ public class PauseManager : MonoBehaviour
             panelAnimator.SetBool("IsPaused", false);
         }
     }
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
-    }
 }

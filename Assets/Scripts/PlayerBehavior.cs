@@ -11,38 +11,12 @@ public class PlayerBehavior : MonoBehaviour
     private Animator anim;
 
     public SpawnManager spawnManager;
+    public GameOverManager gameOverManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-        // Calculate screen boundaries based on camera size and aspect ratio
-        float screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
-
-        // Adjust the maximum horizontal position dynamically
-        float maxHorizontalPosition = screenWidth - 0.25f;
-
-        // Check and limit the horizontal position
-        float clampedX = Mathf.Clamp(transform.position.x, -maxHorizontalPosition, maxHorizontalPosition);
-        transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
-
-        // Check if the player is at the screen borders
-        if (Mathf.Approximately(clampedX, -maxHorizontalPosition) || Mathf.Approximately(clampedX, maxHorizontalPosition))
-        {
-            // Apply the bounce force
-            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
-        }
-
-        // Check if the player is below the camera's view and destroy it
-        if (transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize)
-        {
-            Destroy(gameObject);
-        }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -90,4 +64,31 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        // Calculate screen boundaries based on camera size and aspect ratio
+        float screenWidth = Camera.main.orthographicSize * Camera.main.aspect;
+
+        // Adjust the maximum horizontal position dynamically
+        float maxHorizontalPosition = screenWidth - 0.25f;
+
+        // Check and limit the horizontal position
+        float clampedX = Mathf.Clamp(transform.position.x, -maxHorizontalPosition, maxHorizontalPosition);
+        transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+
+        // Check if the player is at the screen borders
+        if (Mathf.Approximately(clampedX, -maxHorizontalPosition) || Mathf.Approximately(clampedX, maxHorizontalPosition))
+        {
+            // Apply the bounce force
+            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+        }
+
+        // Check if the player is below the camera's view and destroy it
+        if (transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize)
+        {
+            gameOverManager.GameOver();
+            //Destroy(gameObject);
+        }
+
+    }
 }

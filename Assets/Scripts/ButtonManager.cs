@@ -14,6 +14,16 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene("MainGame");
     }
 
+    public void ToTitleScreen()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void SelectedButton(GameObject clickedButton)
     {
         Image buttonImage = clickedButton.GetComponent<Image>();
