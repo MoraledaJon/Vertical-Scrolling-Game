@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerSkin : MonoBehaviour
 {
+
     void Start()
     {
-
-            transform.GetComponent<SpriteRenderer>().sprite = GameManager.selectedSkin.sprite;
+        transform.GetComponent<SpriteRenderer>().sprite = GameManager.selectedSkin.sprite;
     }
 }
