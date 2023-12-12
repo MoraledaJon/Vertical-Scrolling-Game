@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 486018324}
   - component: {fileID: 486018323}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: ToMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,8 +578,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 565061300}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: ToTitleScreen
+        m_TargetAssemblyTypeName: MainGameButtonManager, Assembly-CSharp
+        m_MethodName: ToMenuScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -826,12 +826,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 213198029, guid: 177a8ef6aae83a7478205d9d65f24ca3, type: 3}
+  m_Sprite: {fileID: -719737274, guid: ce50de5956577a04db8c6f0c54194dcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.3, y: 5.3}
+  m_Size: {x: 5.3, y: 5.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -962,14 +962,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 565061293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90ae91de5902af4cafe88e5db23517e, type: 3}
+  m_Script: {fileID: 11500000, guid: bf734b93151de854e86f048e72bb1a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasAnimation: {fileID: 0}
-  circleSprites: []
-  flagSprites: []
-  skinButtons: []
-  skinText: {fileID: 0}
 --- !u!1 &593911328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,7 +1680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 565061300}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: ToTitleScreen
         m_Mode: 1
@@ -2066,7 +2061,7 @@ GameObject:
   - component: {fileID: 1952665602}
   - component: {fileID: 1952665601}
   m_Layer: 5
-  m_Name: ContinueButton
+  m_Name: ResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2137,7 +2132,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 565061300}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainGameButtonManager, Assembly-CSharp
         m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
@@ -2269,7 +2264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 565061300}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: ResetGame
         m_Mode: 1

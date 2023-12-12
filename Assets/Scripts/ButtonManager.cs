@@ -12,25 +12,64 @@ public class ButtonManager : MonoBehaviour
     public Animator canvasAnimation;
     private bool skinMenuIsOpen = false;
 
-    public Sprite[] circleSprites;
-    public Sprite[] flagSprites;
-    public GameObject[] skinButtons;
-    public TextMeshProUGUI skinText;
+    public GameObject circleContents;
+    public GameObject flagContents;
+
+    public ScrollRect scrollRect;
+
+    private Image currentlySelected;
+    
+    public Sprite currentlySelectedSprite;
+    public Sprite notSelectedSprite;
+
+    public Image defaultButton;
+
+    public Button playButton;
+    public Button skinButton;
+    public Button shopButton;
+    public Button moreGamesButton;
+    public Button rateUsButton;
+
+    private Vector3 increaseSize = new Vector3(1.1f, 1.1f, 1.1f);
+    private Vector3 normalSize = new Vector3(0.9f, 0.9f, 0.9f);
+
+    void Start()
+    {
+        if(GameManager.instance.selectedSkin == null)
+        {
+            defaultButton.sprite = currentlySelectedSprite;
+
+            currentlySelected = defaultButton;
+
+            currentlySelected.sprite = currentlySelectedSprite;
+
+            GameManager.instance.selectedSkin = defaultButton.transform.GetChild(0).gameObject.GetComponent<Image>();
+
+            skinButton.transform.localScale = normalSize;
+            playButton.transform.localScale = increaseSize;
+            shopButton.transform.localScale = normalSize;
+            moreGamesButton.transform.localScale = normalSize;
+            rateUsButton.transform.localScale = normalSize;
+        }
+
+    }
 
     public void ToMainGame()
     {
-        SceneManager.LoadScene("MainGame");
+        //SceneManager.LoadScene("MainGame");
+
+        if (skinMenuIsOpen)
+        {
+            canvasAnimation.SetTrigger("closeSkin");
+            skinMenuIsOpen = false;
+            skinButton.transform.localScale = normalSize;
+            playButton.transform.localScale = increaseSize;
+            shopButton.transform.localScale = normalSize;
+            moreGamesButton.transform.localScale = normalSize;
+            rateUsButton.transform.localScale = normalSize;
+        }
     }
 
-    public void ToTitleScreen()
-    {
-        SceneManager.LoadScene("TitleScreen");
-    }
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
     public void Open_Close_Skin()
     {
@@ -38,23 +77,40 @@ public class ButtonManager : MonoBehaviour
         {
             canvasAnimation.SetTrigger("openSkin");
             skinMenuIsOpen = true;
-        }
-        else
-        {
-            canvasAnimation.SetTrigger("closeSkin");
-            skinMenuIsOpen = false;
+            skinButton.transform.localScale = increaseSize;
+            playButton.transform.localScale = normalSize;
+            shopButton.transform.localScale = normalSize;
+            moreGamesButton.transform.localScale = normalSize;
+            rateUsButton.transform.localScale = normalSize;
         }
     }
+
+    public void Open_Close_Shop()
+    {
+        
+    }
+
+
     public void SelectedButton(GameObject clickedButton)
     {
-        Image buttonImage = clickedButton.GetComponent<Image>();
+        Image buttonImage = clickedButton.transform.GetChild(0).gameObject.GetComponent<Image>();
+        GameManager.instance.selectedSkin = clickedButton.transform.GetChild(0).gameObject.GetComponent<Image>();
 
         if (buttonImage != null)
         {
-            selectedButtonImage = buttonImage;
 
 
-            GameManager.selectedSkin = selectedButtonImage;
+            if (currentlySelected)
+            {
+                currentlySelected.sprite = notSelectedSprite;
+                currentlySelected = clickedButton.GetComponent<Image>();
+                currentlySelected.sprite = currentlySelectedSprite;
+            }
+            else
+            {
+                currentlySelected = clickedButton.GetComponent<Image>();
+                currentlySelected.sprite = currentlySelectedSprite;
+            }
         }
         else
         {
@@ -64,19 +120,15 @@ public class ButtonManager : MonoBehaviour
 
     public void FlagSkinClick()
     {
-        skinText.text = "FLAG SKINS:";
-        for(int i = 0; i < skinButtons.Length; i++)
-        {
-            skinButtons[i].GetComponent<Image>().sprite = flagSprites[i];
-        }
+        flagContents.SetActive(true);
+        scrollRect.content = flagContents.GetComponent<RectTransform>();
+        circleContents.SetActive(false);    
     }
 
     public void CircleSkinClick()
     {
-        skinText.text = "CIRCLE SKINS:";
-        for (int i = 0; i < skinButtons.Length; i++)
-        {
-            skinButtons[i].GetComponent<Image>().sprite = circleSprites[i];
-        }
+        circleContents.SetActive(true);
+        scrollRect.content = circleContents.GetComponent<RectTransform>();
+        flagContents.SetActive(false);
     }
 }

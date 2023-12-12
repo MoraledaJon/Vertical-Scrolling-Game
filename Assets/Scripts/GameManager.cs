@@ -2,9 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public static  class GameManager 
+
+public class GameManager : MonoBehaviour
 {
-    public static Image selectedSkin;
+    public static GameManager instance;
+
+    public GameObject canvas;
+    public Image selectedSkin;
+    public Image selectedSkinButton;
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
 }

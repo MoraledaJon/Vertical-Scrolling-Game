@@ -8,6 +8,8 @@ public class PlayerSkin : MonoBehaviour
 
     void Start()
     {
-        transform.GetComponent<SpriteRenderer>().sprite = GameManager.selectedSkin.sprite;
+        GameManager.instance.canvas.SetActive(false);
+
+        transform.GetComponent<SpriteRenderer>().sprite = GameManager.instance.selectedSkin.sprite;
     }
 }
