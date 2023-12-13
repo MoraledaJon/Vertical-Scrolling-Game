@@ -12,6 +12,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public SpawnManager spawnManager;
     public GameOverManager gameOverManager;
+	public CloudSpawner cloudSpawner;
 
     void Start()
     {
@@ -46,6 +47,8 @@ public class PlayerBehavior : MonoBehaviour
             if(!spawnManager.isSpawning)
             {
                 spawnManager.StartSpawning();
+				cloudSpawner.spawnMaxY = 30f;
+				cloudSpawner.spawnInterval = 1f;
             }
 
             if (floorGameObject)

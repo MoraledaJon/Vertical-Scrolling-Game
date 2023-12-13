@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public GameObject canvas;
     public Image selectedSkin;
-    public Image selectedSkinButton;
+	
+	public int skinIndex;
+	public int categoryIndex;
 
 
     private void Awake()

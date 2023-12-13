@@ -26,19 +26,34 @@ public class BackgroundManager : MonoBehaviour
     private bool skyTransition = false;
 
     public int skyesToShow = 5;
+	
+	public bool isTitleScreen = false;
 
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        mainCamera = Camera.main;
+		if(isTitleScreen)
+		{
+			spriteRenderer = GetComponent<SpriteRenderer>();
+			mainCamera = Camera.main;
 
-        FitImageToScreen();
-        CreateFirstSky();
+			FitImageToScreen();
+		}
+		else
+		{
+			spriteRenderer = GetComponent<SpriteRenderer>();
+			mainCamera = Camera.main;
+
+			FitImageToScreen();
+			CreateFirstSky();
+		}
     }
 
     void Update()
     {
+		if(isTitleScreen)
+			return;
+		
         if(playerTransform.transform.position.y > maxBackgroundyY - background_sizey)
         {
             if (skyCount % skyesToShow == 0)
