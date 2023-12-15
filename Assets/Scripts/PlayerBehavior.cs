@@ -14,6 +14,8 @@ public class PlayerBehavior : MonoBehaviour
     public GameOverManager gameOverManager;
 	public CloudSpawner cloudSpawner;
 
+    public ItemManager itemManager;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,8 +28,7 @@ public class PlayerBehavior : MonoBehaviour
         // Check if the collision is with the floor or the drawn line
         if (collision.gameObject.CompareTag("Floor"))
         {
-            // Apply a bounce force
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
+            rb.velocity = new Vector2(rb.velocity.x, 0f); 
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
             anim.SetTrigger("start");
             if(!floorGameObject)
@@ -59,11 +60,17 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("turbo"))
         {
-            // Apply a bounce force
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
-            rb.AddForce(Vector2.up * bounceForceTurbo, ForceMode2D.Impulse);
-            Destroy(collision.gameObject);
+            itemManager.Turbo_Item(rb, bounceForceTurbo, collision.gameObject);
             anim.SetTrigger("start");
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Half_Line"))
+        {
+            itemManager.Half_Line_Item(collision.gameObject);
         }
     }
 

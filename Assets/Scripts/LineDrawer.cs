@@ -6,7 +6,7 @@ public class LineDrawer : MonoBehaviour
 {
     public GameObject linePrefab;
     public Camera mainCamera;
-    public float maxLineLength = 10f;
+    public float maxLineLength;
     public RectTransform panelRect;
 
     private LineRenderer currentLine;

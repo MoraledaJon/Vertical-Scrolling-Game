@@ -39,6 +39,8 @@ public class ButtonManager : MonoBehaviour
 	
 	private int currentCategory = 0;
 
+    public string url = "https://play.google.com/store/apps/dev?id=6745741300491570853&hl=en_US";
+
     void Start()
     {
         if(GameManager.instance.categoryIndex == 0)
@@ -147,6 +149,7 @@ public class ButtonManager : MonoBehaviour
                 rateUsButton.transform.localScale = normalSize;
                 break;
             case "MoreGames":
+                Application.OpenURL(url);
                 skinButton.transform.localScale = normalSize;
                 playButton.transform.localScale = normalSize;
                 shopButton.transform.localScale = normalSize;

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private bool isPaused = false;
-    public Animator panelAnimator;
+    public GameObject pauseObject;
     
     public PlayerBehavior playerBehavior;
     public LineDrawer lineDrawer;
@@ -21,14 +21,14 @@ public class PauseManager : MonoBehaviour
             playerBehavior.rb.simulated = false;
             lineDrawer.canDraw = false;
             spawnManager.PauseSpawning();
-            panelAnimator.SetBool("IsPaused", true);
+            pauseObject.SetActive(true);
         }
         else
         {
             playerBehavior.rb.simulated = true;
             lineDrawer.canDraw = true;
             spawnManager.ResumeSpawning();
-            panelAnimator.SetBool("IsPaused", false);
+            pauseObject.SetActive(false);
         }
     }
 }
