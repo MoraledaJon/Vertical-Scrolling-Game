@@ -5,14 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerSkin : MonoBehaviour
 {
-	private Image storeImage;
-	
-    void Start()
+ void Start()
     {
-		storeImage = GameManager.instance.selectedSkin;
-		
-        transform.GetComponent<SpriteRenderer>().sprite = storeImage.sprite;
-		
-		GameManager.instance.selectedSkin = storeImage;
+        int selectedSkinIndex = PlayerPrefs.GetInt("SelectedSkinIndex", 0); // Default to 0 if not set
+
+        Sprite selectedSkin = SkinManager.Instance.GetSkin(selectedSkinIndex);
+
+        transform.GetComponent<SpriteRenderer>().sprite = selectedSkin;
     }
 }

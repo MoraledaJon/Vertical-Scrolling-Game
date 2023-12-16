@@ -36,53 +36,13 @@ public class ButtonManager : MonoBehaviour
     public GameObject skinPanel;
     public GameObject shopPanel;
     public GameObject moreGamesPanel;
-	
-	private int currentCategory = 0;
+
 
     public string url = "https://play.google.com/store/apps/dev?id=6745741300491570853&hl=en_US";
 
     void Start()
     {
-        if(GameManager.instance.categoryIndex == 0)
-        {
-            defaultButton.sprite = currentlySelectedSprite;
-
-            currentlySelected = defaultButton;
-
-            currentlySelected.sprite = currentlySelectedSprite;
-
-            GameManager.instance.selectedSkin = defaultButton.transform.GetChild(0).gameObject.GetComponent<Image>();
-			
-			GameManager.instance.skinIndex = 1;
-			
-			GameManager.instance.categoryIndex = 1;
-			
-            Open_Close_Manager("Main");
-        }
-		
-		else
-		{
-			switch(GameManager.instance.categoryIndex)
-			{
-				case 1:
-					CircleSkinClick();
-					break;
-				case 2:
-					FlagSkinClick();
-					break;
-				case 3:
-					PlanetSkinClick();
-					break;	
-			}
-			
-			GameObject button = GameObject.Find("1");
-			
-			Debug.Log(button);
-			
-            //currentlySelected = button.GetComponent<Image>();
-            
-			//currentlySelected.sprite = currentlySelectedSprite;
-		}
+        Open_Close_Manager("Main");
     }
 
 	public void ToGame()
@@ -166,37 +126,6 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void SelectedButton(GameObject clickedButton)
-    {
-       Image buttonImage = clickedButton.transform.GetChild(0).gameObject.GetComponent<Image>();
-	   
-        if (buttonImage != null)
-        {
-			GameManager.instance.selectedSkin = buttonImage;
-			
-			GameManager.instance.categoryIndex = currentCategory;
-			
-			GameManager.instance.skinIndex = int.Parse(clickedButton.name);
-
-            if (currentlySelected)
-            {
-                currentlySelected.sprite = notSelectedSprite;
-                currentlySelected = clickedButton.GetComponent<Image>();
-                currentlySelected.sprite = currentlySelectedSprite;
-            }
-            else
-            {
-                currentlySelected = clickedButton.GetComponent<Image>();
-                currentlySelected.sprite = currentlySelectedSprite;
-            }
-
-        }
-        else
-        {
-            Debug.LogError("Button does not have an Image component.");
-        }
-    }
-
     public void CircleSkinClick()
     {
         circleContents.SetActive(true);
@@ -204,7 +133,6 @@ public class ButtonManager : MonoBehaviour
         flagContents.SetActive(false);
 		planetContents.SetActive(false);
         category.text = "CIRCLES";
-		currentCategory = 1;
     }
 
     public void FlagSkinClick()
@@ -214,7 +142,6 @@ public class ButtonManager : MonoBehaviour
         circleContents.SetActive(false);
 		planetContents.SetActive(false);
         category.text = "FLAGS";
-		currentCategory = 2;
     }
 
 	public void PlanetSkinClick()
@@ -224,6 +151,5 @@ public class ButtonManager : MonoBehaviour
         flagContents.SetActive(false);
 		circleContents.SetActive(false);
         category.text = "PLANETS";
-		currentCategory = 3;
     }
 }
