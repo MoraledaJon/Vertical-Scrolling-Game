@@ -16,4 +16,27 @@ public class ScoreManager : MonoBehaviour
 
         scoreText.text = score.ToString("D4") + "m";
     }
+
+    //public static ScoreManager Instance;
+    //public TextMeshProUGUI scoreText;
+
+    //private int score;
+
+    //void Awake()
+    //{
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //    }
+    //    else if (Instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
+
+    //void Start()
+    //{
+    //    score = 0;
+    //    scoreText.text = score.ToString();
+    //}
 }
