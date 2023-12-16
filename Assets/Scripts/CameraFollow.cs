@@ -9,6 +9,10 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
+        if(GameOverManager.instance.isGameOver)
+        {
+            return;
+        }
         float threshold = Camera.main.orthographicSize * verticalFollowOffsetPercent;
 
         if(player)

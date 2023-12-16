@@ -51,7 +51,7 @@ public class BackgroundManager : MonoBehaviour
 
     void Update()
     {
-		if(isTitleScreen)
+		if(isTitleScreen || GameOverManager.instance.isGameOver)
 			return;
 		
         if(playerTransform.transform.position.y > maxBackgroundyY - background_sizey)

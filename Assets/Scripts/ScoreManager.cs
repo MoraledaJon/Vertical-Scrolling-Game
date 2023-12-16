@@ -2,41 +2,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Camera cam;
-    public TextMeshProUGUI scoreText;
+    public static ScoreManager Instance;
 
-    public int score;
+    public int Score { get; private set; }
+    
+    private List<int> highScores = new List<int>();
 
-    void Update()
+    void Awake()
     {
-        score = Mathf.RoundToInt(cam.transform.position.y);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
-        scoreText.text = score.ToString("D4") + "m";
+        LoadScores();
     }
 
-    //public static ScoreManager Instance;
-    //public TextMeshProUGUI scoreText;
+    public void AddScore(int amount)
+    {
+        Score = amount;
+        UpdateHighScores(Score);
+    }
 
-    //private int score;
+    private void UpdateHighScores(int newScore)
+    {
+        highScores.Add(newScore);
+        highScores = highScores.OrderByDescending(score => score).Take(10).ToList();
+        SaveScores();
+    }
 
-    //void Awake()
-    //{
-    //    if (Instance == null)
-    //    {
-    //        Instance = this;
-    //    }
-    //    else if (Instance != this)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void SaveScores()
+    {
+        for (int i = 0; i < highScores.Count; i++)
+        {
+            PlayerPrefs.SetInt("HighScore" + i, highScores[i]);
+        }
+        PlayerPrefs.Save();
+    }
 
-    //void Start()
-    //{
-    //    score = 0;
-    //    scoreText.text = score.ToString();
-    //}
+    private void LoadScores()
+    {
+        highScores.Clear();
+        for (int i = 0; i < 10; i++)
+        {
+            highScores.Add(PlayerPrefs.GetInt("HighScore" + i, 0));
+        }
+        Score = 0; // Reset current score, or set it as needed
+    }
+
+    public List<int> GetHighScores()
+    {
+        return highScores;
+    }
 }

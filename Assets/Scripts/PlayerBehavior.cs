@@ -89,15 +89,17 @@ public class PlayerBehavior : MonoBehaviour
         // Check if the player is at the screen borders
         if (Mathf.Approximately(clampedX, -maxHorizontalPosition) || Mathf.Approximately(clampedX, maxHorizontalPosition))
         {
-            // Apply the bounce force
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
         }
 
         // Check if the player is below the camera's view and destroy it
         if (transform.position.y < Camera.main.transform.position.y - Camera.main.orthographicSize)
         {
-            gameOverManager.GameOver();
-            //Destroy(gameObject);
+            if(!gameOverManager.isGameOver)
+            {
+                gameOverManager.GameOver();
+                Destroy(transform.gameObject);
+            }
         }
 
     }
