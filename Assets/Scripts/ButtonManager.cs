@@ -33,11 +33,21 @@ public class ButtonManager : MonoBehaviour
     public GameObject skinPanel;
     public GameObject shopPanel;
     public GameObject moreGamesPanel;
+    
     public GameObject ScoreRankingPanel;
     private bool isScorePanelOpen = false;
     public TextMeshProUGUI rank1;
     public TextMeshProUGUI rank2;
     public TextMeshProUGUI rank3;
+
+    public GameObject settingsPanel;
+    private bool isSettingsPanelOpen = false;
+    public GameObject musicButton;
+    public GameObject effectButton;
+    public Sprite soundImage;
+    public Sprite soundImageOff;
+    public Sprite effectImage;
+    public Sprite effectImageOff;
 
     public string url = "https://play.google.com/store/apps/dev?id=6745741300491570853&hl=en_US";
 
@@ -74,6 +84,11 @@ public class ButtonManager : MonoBehaviour
     public void Open_Close_ScoreManager()
     {
         Open_Close_Manager("ScoreManager");
+    }
+
+    public void Open_Close_Settings()
+    {
+        Open_Close_Manager("Settings");
     }
 
     private void Open_Close_Manager(string menu)
@@ -162,7 +177,66 @@ public class ButtonManager : MonoBehaviour
                     ScoreRankingPanel.SetActive(false);
                     isScorePanelOpen = false;
                 }
+                break;  
+            case "Settings":
+
+                if(!isSettingsPanelOpen)
+                {
+                    settingsPanel.SetActive(true);
+                    isSettingsPanelOpen = true;
+
+                    if (SettingsManager.Instance.IsMusicEnabled())
+                    {
+                        musicButton.GetComponent<Image>().sprite = soundImage;
+                    }
+                    else
+                    {
+                        musicButton.GetComponent<Image>().sprite = soundImageOff;
+                    }
+
+                    if (SettingsManager.Instance.AreSoundEffectsEnabled())
+                    {
+                        effectButton.GetComponent<Image>().sprite = effectImage;
+                    }
+                    else
+                    {
+                        effectButton.GetComponent<Image>().sprite = effectImageOff;
+                    }
+                }
+                else
+                {
+                    settingsPanel.SetActive(false);
+                    isSettingsPanelOpen = false;
+                }
                 break;
+        }
+    }
+
+    public void SoundClick()
+    {
+        if(SettingsManager.Instance.IsMusicEnabled())
+        {
+            musicButton.GetComponent<Image>().sprite = soundImageOff;
+            SettingsManager.Instance.ToggleMusic(false);
+        }
+        else
+        {
+            musicButton.GetComponent<Image>().sprite = soundImage;
+            SettingsManager.Instance.ToggleMusic(true);
+        }
+    }
+
+    public void EffectClick()
+    {
+        if (SettingsManager.Instance.AreSoundEffectsEnabled())
+        {
+            effectButton.GetComponent<Image>().sprite = effectImageOff;
+            SettingsManager.Instance.ToggleSoundEffects(false);
+        }
+        else
+        {
+            effectButton.GetComponent<Image>().sprite = effectImage;
+            SettingsManager.Instance.ToggleSoundEffects(true);
         }
     }
 
