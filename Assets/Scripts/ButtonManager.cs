@@ -4,18 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ButtonManager : MonoBehaviour
 {
-    private Image selectedButtonImage;
-
 	public GameObject circleContents;
     public GameObject flagContents;
 	public GameObject planetContents;
 
     public ScrollRect scrollRect;
-
-    private Image currentlySelected;
     
     public Sprite currentlySelectedSprite;
     public Sprite notSelectedSprite;
@@ -36,7 +33,11 @@ public class ButtonManager : MonoBehaviour
     public GameObject skinPanel;
     public GameObject shopPanel;
     public GameObject moreGamesPanel;
-
+    public GameObject ScoreRankingPanel;
+    private bool isScorePanelOpen = false;
+    public TextMeshProUGUI rank1;
+    public TextMeshProUGUI rank2;
+    public TextMeshProUGUI rank3;
 
     public string url = "https://play.google.com/store/apps/dev?id=6745741300491570853&hl=en_US";
 
@@ -49,7 +50,7 @@ public class ButtonManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("MainGame");
 	}
-	
+
     public void Open_close_MainGame()
     {
         Open_Close_Manager("Main");
@@ -70,9 +71,9 @@ public class ButtonManager : MonoBehaviour
         Open_Close_Manager("MoreGames");
     }
 
-    public void Open_Close_RateUs()
+    public void Open_Close_ScoreManager()
     {
-        Open_Close_Manager("RateUs");
+        Open_Close_Manager("ScoreManager");
     }
 
     private void Open_Close_Manager(string menu)
@@ -96,10 +97,6 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
-				
-				GameObject button = GameObject.Find("1");
-			
-				Debug.Log(button);
                 break;
             case "Shop":
                 skinButton.transform.localScale = normalSize;
@@ -122,6 +119,49 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = increaseSize;
+                break;
+            case "ScoreManager":
+                
+                List<int> highScoreList = ScoreManager.Instance.GetHighScores();
+
+                if (!isScorePanelOpen)
+                {
+                    ScoreRankingPanel.SetActive(true);
+                    isScorePanelOpen = true;
+
+                    if (highScoreList[0] <= 9999)
+                    {
+                        rank1.text = highScoreList[0].ToString();
+                    }
+                    else
+                    {
+                        rank1.text = (highScoreList[0] / 1000).ToString() + "k";
+                    }
+                    
+                    if (highScoreList[1] <= 9999)
+                    {
+                        rank1.text = highScoreList[1].ToString();
+                    }
+                    else
+                    {
+                        rank1.text = (highScoreList[1] / 1000).ToString() + "k";
+                    }
+                    
+                    if (highScoreList[2] <= 9999)
+                    {
+                        rank1.text = highScoreList[2].ToString();
+                    }
+                    else
+                    {
+                        rank1.text = (highScoreList[2] / 1000).ToString() + "k";
+                    }
+
+                }
+                else
+                {
+                    ScoreRankingPanel.SetActive(false);
+                    isScorePanelOpen = false;
+                }
                 break;
         }
     }

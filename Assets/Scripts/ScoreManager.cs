@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 
+
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
