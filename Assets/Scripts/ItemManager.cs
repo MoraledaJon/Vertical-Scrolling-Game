@@ -35,8 +35,7 @@ public class ItemManager : MonoBehaviour
     public void Half_Line_Item(GameObject collisionObject)
     {
         Destroy(collisionObject);
-        
-        if(half_Line_Playing)
+        if (half_Line_Playing)
         {
             StopAllCoroutines();
             StartCoroutine(Half_Time_Enumerator());

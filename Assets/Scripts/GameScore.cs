@@ -9,7 +9,7 @@ public class GameScore : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameOverManager gameOverManager;
 
-    private int score;
+    public int score;
 
     void Update()
     {

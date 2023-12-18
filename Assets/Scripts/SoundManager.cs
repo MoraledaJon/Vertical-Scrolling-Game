@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip backgroundMusicClip;
     public AudioClip buttonClickClip;
     public AudioClip bounceClip;
+    public AudioClip turboClip;
+    public AudioClip halfLineClip;
     private AudioSource musicSource;
     private AudioSource sfxSource;
 
@@ -57,6 +59,16 @@ public class SoundManager : MonoBehaviour
     public void PlayBounceSound()
     {
         PlaySoundEffect(bounceClip);
+    }
+
+    public void PlayTurboItemSound()
+    {
+        PlaySoundEffect(turboClip);
+    }
+
+    public void HalfLineItemSound()
+    {
+        PlaySoundEffect(halfLineClip);
     }
 
     public void SetMusicEnabled(bool isEnabled)

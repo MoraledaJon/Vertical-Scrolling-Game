@@ -44,6 +44,7 @@ public class PlayerBehavior : MonoBehaviour
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
             anim.SetTrigger("start");
+			SoundManager.Instance.PlayBounceSound();
             
             if(!spawnManager.isSpawning)
             {
@@ -60,6 +61,7 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("turbo"))
         {
+            SoundManager.Instance.PlayTurboItemSound();
             itemManager.Turbo_Item(rb, bounceForceTurbo, collision.gameObject);
             anim.SetTrigger("start");
         }
@@ -70,6 +72,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Half_Line"))
         {
+			SoundManager.Instance.HalfLineItemSound();
             itemManager.Half_Line_Item(collision.gameObject);
         }
     }

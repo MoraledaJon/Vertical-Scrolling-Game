@@ -103,6 +103,7 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
+				SoundManager.Instance.PlayButtonClick();
                 break;
             case "Skin":
                 mainPanel.SetActive(false);
@@ -112,6 +113,7 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
+				SoundManager.Instance.PlayButtonClick();
                 break;
             case "Shop":
                 skinButton.transform.localScale = normalSize;
@@ -119,6 +121,7 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = increaseSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
+				SoundManager.Instance.PlayButtonClick();
                 break;
             case "MoreGames":
                 Application.OpenURL(url);
@@ -127,6 +130,7 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = increaseSize;
                 rateUsButton.transform.localScale = normalSize;
+				SoundManager.Instance.PlayButtonClick();
                 break;
             case "RateUs":
                 skinButton.transform.localScale = normalSize;
@@ -134,10 +138,12 @@ public class ButtonManager : MonoBehaviour
                 shopButton.transform.localScale = normalSize;
                 moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = increaseSize;
+				SoundManager.Instance.PlayButtonClick();
                 break;
             case "ScoreManager":
                 
                 List<int> highScoreList = ScoreManager.Instance.GetHighScores();
+				SoundManager.Instance.PlayButtonClick();
 
                 if (!isScorePanelOpen)
                 {
@@ -155,20 +161,20 @@ public class ButtonManager : MonoBehaviour
                     
                     if (highScoreList[1] <= 9999)
                     {
-                        rank1.text = highScoreList[1].ToString();
+                        rank2.text = highScoreList[1].ToString();
                     }
                     else
                     {
-                        rank1.text = (highScoreList[1] / 1000).ToString() + "k";
+                        rank2.text = (highScoreList[1] / 1000).ToString() + "k";
                     }
                     
                     if (highScoreList[2] <= 9999)
                     {
-                        rank1.text = highScoreList[2].ToString();
+                        rank3.text = highScoreList[2].ToString();
                     }
                     else
                     {
-                        rank1.text = (highScoreList[2] / 1000).ToString() + "k";
+                        rank3.text = (highScoreList[2] / 1000).ToString() + "k";
                     }
 
                 }
@@ -179,6 +185,7 @@ public class ButtonManager : MonoBehaviour
                 }
                 break;  
             case "Settings":
+				SoundManager.Instance.PlayButtonClick();
 
                 if(!isSettingsPanelOpen)
                 {
@@ -242,6 +249,7 @@ public class ButtonManager : MonoBehaviour
 
     public void CircleSkinClick()
     {
+		SoundManager.Instance.PlayButtonClick();
         circleContents.SetActive(true);
         scrollRect.content = circleContents.GetComponent<RectTransform>();
         flagContents.SetActive(false);
@@ -251,6 +259,7 @@ public class ButtonManager : MonoBehaviour
 
     public void FlagSkinClick()
     {
+		SoundManager.Instance.PlayButtonClick();
         flagContents.SetActive(true);
         scrollRect.content = flagContents.GetComponent<RectTransform>();
         circleContents.SetActive(false);
@@ -260,6 +269,7 @@ public class ButtonManager : MonoBehaviour
 
 	public void PlanetSkinClick()
     {
+		SoundManager.Instance.PlayButtonClick();
         planetContents.SetActive(true);
         scrollRect.content = planetContents.GetComponent<RectTransform>();
         flagContents.SetActive(false);

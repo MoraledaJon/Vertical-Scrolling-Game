@@ -10856,8 +10856,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusicClip: {fileID: 8300000, guid: aa4f40d4d5852e241addb8f7c9f65c37, type: 3}
-  buttonClickClip: {fileID: 0}
-  bounceClip: {fileID: 0}
+  buttonClickClip: {fileID: 8300000, guid: 064a497c23832134a871c1c1cc51c341, type: 3}
+  bounceClip: {fileID: 8300000, guid: eab72251be639204da61095a595c56cc, type: 3}
+  turboClip: {fileID: 8300000, guid: 2a111e5691bea62428d77ae04cffab63, type: 3}
+  halfLineClip: {fileID: 8300000, guid: 1cd04590752f1ce48b22930e9b1adb2d, type: 3}
 --- !u!82 &1780786577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10870,7 +10872,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
