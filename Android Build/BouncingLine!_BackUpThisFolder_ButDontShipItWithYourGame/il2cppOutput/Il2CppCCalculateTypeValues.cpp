@@ -1862,6 +1862,8 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
 struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
 // GameOverManager
 struct GameOverManager_t9CE15CF06900552817539FFD96D3D9FAAEFBA4D8;
+// GameScore
+struct GameScore_tD0150CF276468D6902B004D2DF49E16DE8124B86;
 // UnityEngine.UIElements.GenericDropdownMenu
 struct GenericDropdownMenu_t4CD56B241F3F5667305283313EE5BB5DF7D0C6D1;
 // UnityEngineInternal.GenericStack
@@ -11063,14 +11065,14 @@ struct U3CU3Ec_tC91356F4CB32E0A0C2FFCB36B7E2C51A6CFAC05F  : public RuntimeObject
 {
 };
 
-// CloudSpawner/<SpawnClouds>d__12
-struct U3CSpawnCloudsU3Ed__12_t0881F9E0F966E3D0D930EF38FEE596754D625C31  : public RuntimeObject
+// CloudSpawner/<SpawnClouds>d__13
+struct U3CSpawnCloudsU3Ed__13_tEF999E55EEC1CFD2A1AEDD041D8500DA9B41BD18  : public RuntimeObject
 {
-	// System.Int32 CloudSpawner/<SpawnClouds>d__12::<>1__state
+	// System.Int32 CloudSpawner/<SpawnClouds>d__13::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object CloudSpawner/<SpawnClouds>d__12::<>2__current
+	// System.Object CloudSpawner/<SpawnClouds>d__13::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// CloudSpawner CloudSpawner/<SpawnClouds>d__12::<>4__this
+	// CloudSpawner CloudSpawner/<SpawnClouds>d__13::<>4__this
 	CloudSpawner_tD11A66DF9E623AFF70BF3C672D36E655A3EF9640* ___U3CU3E4__this_2;
 };
 
@@ -42205,6 +42207,12 @@ struct Cloud_t75A881299C48E5DFFC417596837361E3A142A236  : public MonoBehaviour_t
 	float ___screenWidthWorldUnits_5;
 	// System.Boolean Cloud::hasBeenOnScreen
 	bool ___hasBeenOnScreen_6;
+	// UnityEngine.Rigidbody2D Cloud::rb
+	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ___rb_7;
+	// UnityEngine.Vector2 Cloud::originalVelocity
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___originalVelocity_8;
+	// System.Boolean Cloud::isPaused
+	bool ___isPaused_9;
 };
 
 // CloudSpawner
@@ -42232,6 +42240,8 @@ struct CloudSpawner_tD11A66DF9E623AFF70BF3C672D36E655A3EF9640  : public MonoBeha
 	float ___screenWidthWorldUnits_13;
 	// UnityEngine.GameObject CloudSpawner::cam
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___cam_14;
+	// System.Boolean CloudSpawner::isPaused
+	bool ___isPaused_15;
 };
 
 // UnityEngine.UIElements.DropdownField
@@ -42474,6 +42484,24 @@ struct PauseManager_t84975A438A2233D672703B683A1E557962911022  : public MonoBeha
 	LineDrawer_tE4C4A3903238278062DCE597032B796429339A6A* ___lineDrawer_7;
 	// SpawnManager PauseManager::spawnManager
 	SpawnManager_tD38605BF221D4CC849CF709A85499D2B698FD6FC* ___spawnManager_8;
+	// UnityEngine.GameObject PauseManager::musicButton
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___musicButton_9;
+	// UnityEngine.GameObject PauseManager::effectButton
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___effectButton_10;
+	// UnityEngine.Sprite PauseManager::soundImage
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___soundImage_11;
+	// UnityEngine.Sprite PauseManager::soundImageOff
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___soundImageOff_12;
+	// UnityEngine.Sprite PauseManager::effectImage
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___effectImage_13;
+	// UnityEngine.Sprite PauseManager::effectImageOff
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___effectImageOff_14;
+	// TMPro.TextMeshProUGUI PauseManager::score
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___score_15;
+	// CloudSpawner PauseManager::cloudSpawner
+	CloudSpawner_tD11A66DF9E623AFF70BF3C672D36E655A3EF9640* ___cloudSpawner_16;
+	// GameScore PauseManager::gameScore
+	GameScore_tD0150CF276468D6902B004D2DF49E16DE8124B86* ___gameScore_17;
 };
 
 // PlayerBehavior
@@ -42612,10 +42640,14 @@ struct SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734  : public MonoBeha
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___buttonClickClip_6;
 	// UnityEngine.AudioClip SoundManager::bounceClip
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___bounceClip_7;
+	// UnityEngine.AudioClip SoundManager::turboClip
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___turboClip_8;
+	// UnityEngine.AudioClip SoundManager::halfLineClip
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___halfLineClip_9;
 	// UnityEngine.AudioSource SoundManager::musicSource
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___musicSource_8;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___musicSource_10;
 	// UnityEngine.AudioSource SoundManager::sfxSource
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___sfxSource_9;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___sfxSource_11;
 };
 
 // SpawnManager
@@ -49753,9 +49785,9 @@ struct U3CU3Ec_tC91356F4CB32E0A0C2FFCB36B7E2C51A6CFAC05F_StaticFields
 
 // System.Threading.CancellationToken/<>c
 
-// CloudSpawner/<SpawnClouds>d__12
+// CloudSpawner/<SpawnClouds>d__13
 
-// CloudSpawner/<SpawnClouds>d__12
+// CloudSpawner/<SpawnClouds>d__13
 
 // UnityEngine.UIElements.ComputedTransitionUtils/<>c
 struct U3CU3Ec_t93D1A1A39288C3945FC44D03D7B269DE34D23B56_StaticFields
@@ -67949,7 +67981,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3478 = { sizeof(CameraFollow
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3479;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3479 = { sizeof(Cloud_t75A881299C48E5DFFC417596837361E3A142A236), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3480;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3480 = { sizeof(U3CSpawnCloudsU3Ed__12_t0881F9E0F966E3D0D930EF38FEE596754D625C31), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3480 = { sizeof(U3CSpawnCloudsU3Ed__13_tEF999E55EEC1CFD2A1AEDD041D8500DA9B41BD18), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3481;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3481 = { sizeof(CloudSpawner_tD11A66DF9E623AFF70BF3C672D36E655A3EF9640), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3482;

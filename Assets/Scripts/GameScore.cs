@@ -20,7 +20,7 @@ public class GameScore : MonoBehaviour
 
         score = Mathf.RoundToInt(cam.transform.position.y);
 
-        scoreText.text = score.ToString("D4") + "m";
+        scoreText.text = score.ToString() + "m";
 
         gameOverManager.finalScore = score;
     }

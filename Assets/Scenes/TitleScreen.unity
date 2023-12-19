@@ -4362,7 +4362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &759590246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8239,7 +8239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1444983494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15491,7 +15491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JAPAN
+  m_text: ITALY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaba35147b06d5a4095aa941e7d79d96, type: 2}
   m_sharedMaterial: {fileID: 8288904057404815739, guid: aaba35147b06d5a4095aa941e7d79d96, type: 2}
@@ -16737,7 +16737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PHILIPINES
+  m_text: PHILIPPINES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaba35147b06d5a4095aa941e7d79d96, type: 2}
   m_sharedMaterial: {fileID: 8288904057404815739, guid: aaba35147b06d5a4095aa941e7d79d96, type: 2}
