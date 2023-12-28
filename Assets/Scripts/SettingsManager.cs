@@ -8,10 +8,12 @@ public class SettingsManager : MonoBehaviour
 
     private const string MusicPrefKey = "MusicEnabled";
     private const string SoundEffectsPrefKey = "SoundEffectsEnabled";
+    private const string VibrationPrefKey = "VibrationEnabled";
 
     // Add private variables to hold the current state
     private bool isMusicEnabled;
     private bool areSoundEffectsEnabled;
+    private bool isVibrationEnabled;
 
     private void Start()
     {
@@ -41,6 +43,13 @@ public class SettingsManager : MonoBehaviour
         SavePreference(SoundEffectsPrefKey, isOn);
     }
 
+    public void ToggleVibration(bool isOn)
+    {
+        isVibrationEnabled = isOn;
+        VibrationManager.Instance.SetVibrationEnabled(isOn);
+        SavePreference(VibrationPrefKey, isOn);
+    }
+
     // Public getter methods
     public bool IsMusicEnabled()
     {
@@ -51,6 +60,12 @@ public class SettingsManager : MonoBehaviour
     {
         return areSoundEffectsEnabled;
     }
+
+    public bool IsVibrationEnabled()
+    {
+        return isVibrationEnabled;
+    }
+
 
     private void SavePreference(string key, bool value)
     {
@@ -69,8 +84,10 @@ public class SettingsManager : MonoBehaviour
 
         isMusicEnabled = PlayerPrefs.GetInt(MusicPrefKey, 1) == 1;
         areSoundEffectsEnabled = PlayerPrefs.GetInt(SoundEffectsPrefKey, 1) == 1;
+        isVibrationEnabled = PlayerPrefs.GetInt(VibrationPrefKey, 1) == 1;
 
         SoundManager.Instance.SetMusicEnabled(isMusicEnabled);
         SoundManager.Instance.SetSoundEffectsEnabled(areSoundEffectsEnabled);
+        VibrationManager.Instance.SetVibrationEnabled(isVibrationEnabled);
     }
 }

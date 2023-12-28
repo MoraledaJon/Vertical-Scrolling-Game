@@ -44,10 +44,13 @@ public class ButtonManager : MonoBehaviour
     private bool isSettingsPanelOpen = false;
     public GameObject musicButton;
     public GameObject effectButton;
+    public GameObject vibrationButton;
     public Sprite soundImage;
     public Sprite soundImageOff;
     public Sprite effectImage;
     public Sprite effectImageOff;
+    public Sprite vibrationImage;
+    public Sprite vibrationImageOff;
 
     public TextMeshProUGUI coins;
 
@@ -216,6 +219,15 @@ public class ButtonManager : MonoBehaviour
                     {
                         effectButton.GetComponent<Image>().sprite = effectImageOff;
                     }
+
+                    if (SettingsManager.Instance.IsVibrationEnabled())
+                    {
+                        vibrationButton.GetComponent<Image>().sprite = vibrationImage;
+                    }
+                    else
+                    {
+                        vibrationButton.GetComponent<Image>().sprite = vibrationImageOff;
+                    }
                 }
                 else
                 {
@@ -251,6 +263,20 @@ public class ButtonManager : MonoBehaviour
         {
             effectButton.GetComponent<Image>().sprite = effectImage;
             SettingsManager.Instance.ToggleSoundEffects(true);
+        }
+    }
+
+    public void VibrationClick()
+    {
+        if (SettingsManager.Instance.IsVibrationEnabled())
+        {
+            vibrationButton.GetComponent<Image>().sprite = vibrationImageOff;
+            SettingsManager.Instance.ToggleVibration(false);
+        }
+        else
+        {
+            vibrationButton.GetComponent<Image>().sprite = vibrationImage;
+            SettingsManager.Instance.ToggleVibration(true);
         }
     }
 

@@ -50,7 +50,7 @@ public class PlayerBehavior : MonoBehaviour
 
         else if(collision.gameObject.CompareTag("DrawnLine"))
         {
-            Handheld.Vibrate();
+            VibrationManager.Instance.StartVibration();
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
@@ -78,6 +78,8 @@ public class PlayerBehavior : MonoBehaviour
         }
 
     }
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

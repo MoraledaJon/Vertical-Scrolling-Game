@@ -7,7 +7,7 @@ public class FPS : MonoBehaviour
 
     public TextMeshProUGUI text;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Application.targetFrameRate = 120;
     }
