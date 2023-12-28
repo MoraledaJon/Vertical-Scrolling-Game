@@ -14,6 +14,10 @@ public class LineDrawer : MonoBehaviour
 
     public bool canDraw = true;
 
+    public GameObject player;
+
+    public float proximityThreshold = 0.5f; // Adjust this value as needed
+
     void Update()
     {
         if (!canDraw)
@@ -57,6 +61,12 @@ public class LineDrawer : MonoBehaviour
 
     void StartDrawing(Vector2 touchPos)
     {
+        if (IsTouchingPlayer(touchPos))
+        {
+            Debug.Log("touching");
+            return;
+        }
+
         GameObject lineGO = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
         currentLine = lineGO.GetComponent<LineRenderer>();
 
@@ -77,6 +87,15 @@ public class LineDrawer : MonoBehaviour
         if (currentLine != null)
         {
             Vector2 point = mainCamera.ScreenToWorldPoint(touchPos);
+
+            // Check proximity to the player
+            if (IsTooCloseToPlayer(point))
+            {
+                Destroy(currentLine.gameObject); // Destroy the line
+                currentLine = null;
+                linePoints = null;
+                return;
+            }
 
             // Check if the line length exceeds the maximum length
             if (GetLineLength(linePoints) + Vector2.Distance(point, linePoints[linePoints.Count - 1]) > maxLineLength)
@@ -121,5 +140,22 @@ public class LineDrawer : MonoBehaviour
             length += Vector2.Distance(points[i - 1], points[i]);
         }
         return length;
+    }
+
+    bool IsTouchingPlayer(Vector2 touchPos)
+    {
+        Vector2 worldTouchPos = mainCamera.ScreenToWorldPoint(touchPos);
+        Collider2D hitCollider = Physics2D.OverlapPoint(worldTouchPos);
+        return hitCollider != null && hitCollider.gameObject == player;
+    }
+
+    bool IsTooCloseToPlayer(Vector2 point)
+    {
+        if (player != null)
+        {
+            float distanceToPlayer = Vector2.Distance(point, player.transform.position);
+            return distanceToPlayer < proximityThreshold;
+        }
+        return false;
     }
 }

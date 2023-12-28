@@ -17,4 +17,7 @@ public class FPS : MonoBehaviour
     {
         text.text = (1 / Time.deltaTime).ToString("0");
     }
+
+
+
 }

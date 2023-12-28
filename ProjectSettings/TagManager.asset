@@ -8,6 +8,8 @@ TagManager:
   - DrawnLine
   - turbo
   - Half_Line
+  - Coin
+  - BlackCloud
   layers:
   - Default
   - TransparentFX

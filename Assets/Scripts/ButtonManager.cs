@@ -49,6 +49,8 @@ public class ButtonManager : MonoBehaviour
     public Sprite effectImage;
     public Sprite effectImageOff;
 
+    public TextMeshProUGUI coins;
+
     public string url = "https://play.google.com/store/apps/dev?id=6745741300491570853&hl=en_US";
 
     void Start()
@@ -56,7 +58,12 @@ public class ButtonManager : MonoBehaviour
         Open_Close_Manager("Main");
     }
 
-	public void ToGame()
+    private void Update()
+    {
+       coins.text = CoinManager.Instance.GetTotalCoins().ToString();
+    }
+
+    public void ToGame()
 	{
 		SceneManager.LoadScene("MainGame");
 	}

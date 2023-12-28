@@ -11,8 +11,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip bounceClip;
     public AudioClip turboClip;
     public AudioClip halfLineClip;
+    public AudioClip coinClip;
+    public AudioClip boughtSkinClip;
     private AudioSource musicSource;
     private AudioSource sfxSource;
+
 
     void Awake()
     {
@@ -69,6 +72,16 @@ public class SoundManager : MonoBehaviour
     public void HalfLineItemSound()
     {
         PlaySoundEffect(halfLineClip);
+    }
+
+    public void CoinItemSound()
+    {
+        PlaySoundEffect(coinClip);
+    }
+
+    public void BoughtSkinSound()
+    {
+        PlaySoundEffect(boughtSkinClip);
     }
 
     public void SetMusicEnabled(bool isEnabled)

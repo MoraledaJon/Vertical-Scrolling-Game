@@ -16,8 +16,19 @@ public class PlayerBehavior : MonoBehaviour
 
     public ItemManager itemManager;
 
+    public GameObject plusOnePrefab;
+    public Transform canvas;
+
+    public static PlayerBehavior Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -75,6 +86,16 @@ public class PlayerBehavior : MonoBehaviour
 			SoundManager.Instance.HalfLineItemSound();
             itemManager.Half_Line_Item(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            GameObject plusOneText = Instantiate(plusOnePrefab, collision.transform.position, Quaternion.identity, canvas);
+            plusOneText.transform.localScale = Vector3.one;
+
+            Destroy(plusOneText, 0.3f);
+            SoundManager.Instance.CoinItemSound();
+            itemManager.Coin_Item(collision.gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -105,5 +126,12 @@ public class PlayerBehavior : MonoBehaviour
             }
         }
 
+    }
+
+    public void IncreaseMovementSpeed(float increaseFactor)
+    {
+        bounceForce *= increaseFactor;
+        bounceForceTurbo *= increaseFactor;
+        rb.gravityScale *= increaseFactor;
     }
 }

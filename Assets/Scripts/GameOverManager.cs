@@ -14,6 +14,7 @@ public class GameOverManager : MonoBehaviour
     public int finalScore;
     public bool isGameOver = false;
     private int score;
+    private int coin;
     public static GameOverManager instance;
 
     private void Awake()
@@ -32,13 +33,16 @@ public class GameOverManager : MonoBehaviour
     {
         float timer = 0;
         int startScore = 0;
-        score = finalScore;
+        int startCoin = 0;
 
+        score = finalScore;
         ScoreManager.Instance.AddScore(score);
 
         List<int> highScoresList = ScoreManager.Instance.GetHighScores();
-
         int highScore = highScoresList[0];
+
+        coin = CoinManager.Instance.GetCurrentGameCoins();
+        CoinManager.Instance.SaveGame();
 
         while (timer < animationDuration)
         {
@@ -46,9 +50,13 @@ public class GameOverManager : MonoBehaviour
 
             int interpolatedScoreHighScore = (int)Mathf.Lerp(startScore, highScore, timer / animationDuration);
 
+            int interpolatedCoin = (int)Mathf.Lerp(startCoin, coin, timer / animationDuration);
+
             scoreText.text = interpolatedScore.ToString();
 
             bestScore.text = interpolatedScoreHighScore.ToString();
+
+            coinText.text = interpolatedCoin.ToString();
 
             timer += Time.deltaTime;
 
@@ -57,5 +65,6 @@ public class GameOverManager : MonoBehaviour
 
         scoreText.text = score.ToString();
         bestScore.text = highScore.ToString();
+        coinText.text = coin.ToString();
     }
 }

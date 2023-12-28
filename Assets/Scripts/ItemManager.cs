@@ -12,23 +12,61 @@ public class ItemManager : MonoBehaviour
     public GameObject HalfItem_CanvasPrefab;
     public LineDrawer lineDrawer;
     public int secondsToLast;
-    private TextMeshProUGUI timeRemainingText;
     private bool half_Line_Playing;
     private int seconds;
     private float lineNormal;
     private GameObject cooldownGameObject;
+    public TextMeshProUGUI currentCoinText;
+  
 
 
     private void Start()
     {
         lineNormal = lineDrawer.maxLineLength;
         seconds = secondsToLast;
+
+        CoinManager.Instance.ResetCoin();
+        currentCoinText.text = CoinManager.Instance.GetCurrentGameCoins().ToString();
     }
 
     public void Turbo_Item(Rigidbody2D rb, float bounceForceTurbo, GameObject collisionObject)
     {
         rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
         rb.AddForce(Vector2.up * bounceForceTurbo, ForceMode2D.Impulse);
+
+        // Find all GameObjects with the tag "BlackCloud"
+        GameObject[] blackClouds = GameObject.FindGameObjectsWithTag("BlackCloud");
+
+        // Loop through each found BlackCloud GameObject and set its PolygonCollider2D to trigger
+        foreach (GameObject blackCloud in blackClouds)
+        {
+            PolygonCollider2D polygonCollider = blackCloud.GetComponent<PolygonCollider2D>();
+            if (polygonCollider != null)
+            {
+                polygonCollider.isTrigger = true;
+            }
+        }
+
+        // Destroy the collisionObject
+        Destroy(collisionObject);
+    }
+
+    public void Coin_Item(GameObject collisionObject)
+    {
+        CoinManager.Instance.AddCoin();
+
+        int currentCoins = CoinManager.Instance.GetCurrentGameCoins();
+
+        if (currentCoins > 9999)
+        {
+            float thousands = currentCoins / 1000f;
+            currentCoinText.text = thousands.ToString("0.#") + "k"; // Formats to one decimal place, e.g., 10.5k
+        }
+        else
+        {
+            currentCoinText.text = currentCoins.ToString();
+        }
+
         Destroy(collisionObject);
     }
 
