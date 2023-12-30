@@ -68,8 +68,15 @@ public class ButtonManager : MonoBehaviour
 
     public void ToGame()
 	{
-		SceneManager.LoadScene("MainGame");
-	}
+        if(TutorialManager.Instance != null)
+        {
+            TutorialManager.Instance.LoadAppropriateScene();
+        }
+        else
+        {
+            Debug.LogError("TutorialManager instance not found!");
+        }
+    }
 
     public void Open_close_MainGame()
     {

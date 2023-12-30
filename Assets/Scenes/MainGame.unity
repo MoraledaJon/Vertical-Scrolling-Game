@@ -1302,7 +1302,7 @@ MonoBehaviour:
   panelRect: {fileID: 593911329}
   canDraw: 1
   player: {fileID: 246551832}
-  proximityThreshold: 0.5
+  proximityThreshold: 0.25
 --- !u!4 &565061295
 Transform:
   m_ObjectHideFlags: 0

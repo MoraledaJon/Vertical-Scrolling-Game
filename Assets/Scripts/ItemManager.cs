@@ -34,10 +34,16 @@ public class ItemManager : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity
         rb.AddForce(Vector2.up * bounceForceTurbo, ForceMode2D.Impulse);
 
-        // Find all GameObjects with the tag "BlackCloud"
+        StartCoroutine(Turbo());
+
+        // Destroy the collisionObject
+        Destroy(collisionObject);
+    }
+
+    IEnumerator Turbo()
+    {
         GameObject[] blackClouds = GameObject.FindGameObjectsWithTag("BlackCloud");
 
-        // Loop through each found BlackCloud GameObject and set its PolygonCollider2D to trigger
         foreach (GameObject blackCloud in blackClouds)
         {
             PolygonCollider2D polygonCollider = blackCloud.GetComponent<PolygonCollider2D>();
@@ -47,10 +53,20 @@ public class ItemManager : MonoBehaviour
             }
         }
 
-        // Destroy the collisionObject
-        Destroy(collisionObject);
-    }
+        yield return new WaitForSeconds(1.5f);
 
+        foreach (GameObject blackCloud in blackClouds)
+        {
+            if(blackCloud)
+            {
+                PolygonCollider2D polygonCollider = blackCloud.GetComponent<PolygonCollider2D>();
+                if (polygonCollider != null)
+                {
+                    polygonCollider.isTrigger = false;
+                }
+            }
+        }
+    }
     public void Coin_Item(GameObject collisionObject)
     {
         CoinManager.Instance.AddCoin();

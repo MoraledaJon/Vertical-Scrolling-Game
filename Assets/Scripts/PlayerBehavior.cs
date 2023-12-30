@@ -69,14 +69,6 @@ public class PlayerBehavior : MonoBehaviour
                 Destroy(floorGameObject);
             }
         }
-
-        else if (collision.gameObject.CompareTag("turbo"))
-        {
-            SoundManager.Instance.PlayTurboItemSound();
-            itemManager.Turbo_Item(rb, bounceForceTurbo, collision.gameObject);
-            anim.SetTrigger("start");
-        }
-
     }
 
     
@@ -89,7 +81,7 @@ public class PlayerBehavior : MonoBehaviour
             itemManager.Half_Line_Item(collision.gameObject);
         }
 
-        if (collision.gameObject.CompareTag("Coin"))
+        else if (collision.gameObject.CompareTag("Coin"))
         {
             GameObject plusOneText = Instantiate(plusOnePrefab, collision.transform.position, Quaternion.identity, canvas);
             plusOneText.transform.localScale = Vector3.one;
@@ -97,6 +89,13 @@ public class PlayerBehavior : MonoBehaviour
             Destroy(plusOneText, 0.3f);
             SoundManager.Instance.CoinItemSound();
             itemManager.Coin_Item(collision.gameObject);
+        }
+
+        else if (collision.gameObject.CompareTag("turbo"))
+        {
+            SoundManager.Instance.PlayTurboItemSound();
+            itemManager.Turbo_Item(rb, bounceForceTurbo, collision.gameObject);
+            anim.SetTrigger("start");
         }
     }
 
