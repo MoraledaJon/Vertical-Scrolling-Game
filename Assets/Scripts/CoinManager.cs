@@ -25,7 +25,7 @@ public class CoinManager : MonoBehaviour
 
     public void AddCoin()
     {
-        currentGameCoins += 1000;
+        currentGameCoins += 1;
     }
 
     public void ResetCoin()

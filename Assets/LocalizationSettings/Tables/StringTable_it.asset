@@ -186,6 +186,14 @@ MonoBehaviour:
     m_Localized: FINE DEL GIOCO
     m_Metadata:
       m_Items: []
+  - m_Id: 477882886381568
+    m_Localized: RETOUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478451260710912
+    m_Localized: RIPRENDI
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
