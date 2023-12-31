@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 471e32c6ce9d7413e9347446cdb19c7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 173190144000
+    m_Localized: JOUER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 725521260544
+    m_Localized: SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 945550254080
+    m_Localized: MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1130867187712
+    m_Localized: MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1673412993024
+    m_Localized: PLUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22859723300864
+    m_Localized: BALLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17651697967104
+    m_Localized: "PARAM\xC8TRES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22922973405184
+    m_Localized: ESPACE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22900106059776
+    m_Localized: DRAPEAUX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30708440489984
+    m_Localized: ROUGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30793542918144
+    m_Localized: BLEU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30811624562688
+    m_Localized: VERT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33423325388800
+    m_Localized: BLEU CLAIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33750183305216
+    m_Localized: GRIS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33728775577600
+    m_Localized: JAUNE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34239075573760
+    m_Localized: ROUGE / BLANC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34251713011712
+    m_Localized: BLANC / BLEU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34253520756736
+    m_Localized: MARRON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83259177295872
+    m_Localized: ESPAGNE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83355071668224
+    m_Localized: JAPON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83357131071488
+    m_Localized: CHINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83633330184192
+    m_Localized: "INDON\xC9SIE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83638577258496
+    m_Localized: ITALIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83647284633600
+    m_Localized: "COR\xC9E DU SUD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84056585789440
+    m_Localized: FRANCE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84062743027712
+    m_Localized: INDE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84070548627456
+    m_Localized: PHILIPPINES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84541992591360
+    m_Localized: "AM\xC9RIQUE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85770709753856
+    m_Localized: TERRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85786618748928
+    m_Localized: SATURNE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85816851292160
+    m_Localized: MERCURE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85800992628736
+    m_Localized: JUPITER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85845724880896
+    m_Localized: NEPTUNE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86664515936256
+    m_Localized: PLUTON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86872486305792
+    m_Localized: MARS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87122307440640
+    m_Localized: URANUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87555788759040
+    m_Localized: "V\xC9NUS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88114566520832
+    m_Localized: SOLEIL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 371858342928384
+    m_Localized: "PAUS\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375749704933376
+    m_Localized: "PI\xC8CES"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375923525279744
+    m_Localized: MEILLEUR SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376054718914560
+    m_Localized: FIN DE LA PARTIE
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

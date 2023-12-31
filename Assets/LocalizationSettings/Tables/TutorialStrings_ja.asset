@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialStrings_ja
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ja
+  m_SharedData: {fileID: 11400000, guid: 7b6bf5abc6bd8478a9aab2c39ed46b38, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11214512128
+    m_Localized: "\u30B9\u30EF\u30A4\u30D7\u3057\u3066\u7DDA\u3092\u5F15\u304D\u307E\u3059\u3002\u30DC\u30FC\u30EB\u3092\u3088\u308A\u9AD8\u304F\u8DF3\u306D\u3055\u305B\u7D9A\u3051\u3066\u304F\u3060\u3055\u3044\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4398649434112
+    m_Localized: "\u767D\u3044\u96F2\u3092\u81EA\u7531\u306B\u8DF3\u306D\u3066\u304F\u3060\u3055\u3044\u3002\u9ED2\u3044\u96F2\u3092\u907F\u3051\u3066\u3001\u3076\u3064\u304B\u3089\u306A\u3044\u3088\u3046\u306B\u3057\u3066\u304F\u3060\u3055\u3044\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4582636773376
+    m_Localized: "BOOST!' \u30A2\u30A4\u30C6\u30E0\u3092\u53D6\u3063\u3066\u9AD8\u304F\u8DF3\u3076\u3002\u8D64\u306E
+      '-50%' \u306F\u3042\u306A\u305F\u306E\u30E9\u30A4\u30F3\u3092\u6E1B\u3089\u3057\u307E\u3059\uFF01"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

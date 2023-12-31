@@ -12,18 +12,19 @@ public class ButtonManager : MonoBehaviour
     public GameObject flagContents;
 	public GameObject planetContents;
 
+    public GameObject circleCategory;
+    public GameObject flagCategory;
+    public GameObject planetCategory;
+
     public ScrollRect scrollRect;
     
     public Sprite currentlySelectedSprite;
     public Sprite notSelectedSprite;
 
     public Image defaultButton;
-    public TextMeshProUGUI category;
 
     public Button playButton;
     public Button skinButton;
-    public Button shopButton;
-    public Button moreGamesButton;
     public Button rateUsButton;
 
     public Vector3 increaseSize = new Vector3(1.5f, 1.5f, 1.5f);
@@ -31,8 +32,6 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject mainPanel;
     public GameObject skinPanel;
-    public GameObject shopPanel;
-    public GameObject moreGamesPanel;
     
     public GameObject ScoreRankingPanel;
     private bool isScorePanelOpen = false;
@@ -88,16 +87,6 @@ public class ButtonManager : MonoBehaviour
         Open_Close_Manager("Skin");
     }
 
-    public void Open_Close_Shop()
-    {
-        Open_Close_Manager("Shop");
-    }
-
-    public void Open_Close_MoreGames()
-    {
-        Open_Close_Manager("MoreGames");
-    }
-
     public void Open_Close_ScoreManager()
     {
         Open_Close_Manager("ScoreManager");
@@ -117,8 +106,6 @@ public class ButtonManager : MonoBehaviour
                 skinPanel.SetActive(false);
                 skinButton.transform.localScale = normalSize;
                 playButton.transform.localScale = increaseSize;
-                shopButton.transform.localScale = normalSize;
-                moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
 				SoundManager.Instance.PlayButtonClick();
                 break;
@@ -127,16 +114,12 @@ public class ButtonManager : MonoBehaviour
                 skinPanel.SetActive(true);
                 skinButton.transform.localScale = increaseSize;
                 playButton.transform.localScale = normalSize;
-                shopButton.transform.localScale = normalSize;
-                moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
 				SoundManager.Instance.PlayButtonClick();
                 break;
             case "Shop":
                 skinButton.transform.localScale = normalSize;
                 playButton.transform.localScale = normalSize;
-                shopButton.transform.localScale = increaseSize;
-                moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = normalSize;
 				SoundManager.Instance.PlayButtonClick();
                 break;
@@ -144,16 +127,12 @@ public class ButtonManager : MonoBehaviour
                 Application.OpenURL(url);
                 skinButton.transform.localScale = normalSize;
                 playButton.transform.localScale = normalSize;
-                shopButton.transform.localScale = normalSize;
-                moreGamesButton.transform.localScale = increaseSize;
                 rateUsButton.transform.localScale = normalSize;
 				SoundManager.Instance.PlayButtonClick();
                 break;
             case "RateUs":
                 skinButton.transform.localScale = normalSize;
                 playButton.transform.localScale = normalSize;
-                shopButton.transform.localScale = normalSize;
-                moreGamesButton.transform.localScale = normalSize;
                 rateUsButton.transform.localScale = increaseSize;
 				SoundManager.Instance.PlayButtonClick();
                 break;
@@ -291,29 +270,35 @@ public class ButtonManager : MonoBehaviour
     {
 		SoundManager.Instance.PlayButtonClick();
         circleContents.SetActive(true);
+        circleCategory.SetActive(true);
         scrollRect.content = circleContents.GetComponent<RectTransform>();
         flagContents.SetActive(false);
-		planetContents.SetActive(false);
-        category.text = "CIRCLES";
+        flagCategory.SetActive(false);
+        planetContents.SetActive(false);
+        planetCategory.SetActive(false);
     }
 
     public void FlagSkinClick()
     {
 		SoundManager.Instance.PlayButtonClick();
         flagContents.SetActive(true);
+        flagCategory.SetActive(true);
         scrollRect.content = flagContents.GetComponent<RectTransform>();
         circleContents.SetActive(false);
-		planetContents.SetActive(false);
-        category.text = "FLAGS";
+        circleCategory.SetActive(false);
+        planetContents.SetActive(false);
+        planetCategory.SetActive(false);
     }
 
 	public void PlanetSkinClick()
     {
 		SoundManager.Instance.PlayButtonClick();
         planetContents.SetActive(true);
+        planetCategory.SetActive(true);
         scrollRect.content = planetContents.GetComponent<RectTransform>();
         flagContents.SetActive(false);
-		circleContents.SetActive(false);
-        category.text = "PLANETS";
+        flagCategory.SetActive(false);
+        circleContents.SetActive(false);
+        circleCategory.SetActive(false);
     }
 }
